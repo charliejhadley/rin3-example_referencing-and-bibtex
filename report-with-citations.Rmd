@@ -15,20 +15,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Bechdel dataset
-
-The bechdel dataset contains more movies that fail the test than pass, Figure \@ref(fig:bechdel-binary-bar-chart).
-
-```{r bechdel-binary-bar-chart, fig.cap="fivethirty::bechdel contains more movies that fail the test"}
-library("tidyverse")
-library("fivethirtyeight")
-bechdel %>% 
-  count(binary) %>% 
-  ggplot(aes(x = n,
-             y = binary)) +
-  geom_col()
-```
-
 # Food pairing network
 
 One of my favourite papers ever looks at food pairing networks @Ahn_Ahnert_Bagrow_Barabási_2011.
